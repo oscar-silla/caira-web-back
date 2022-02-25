@@ -1,0 +1,6 @@
+USER ROLES:
+***********
+1. Admin ( All privileges )
+2. University ( Most privileges )
+3. Collaborators ( Some privileges )
+4. Students ( Without privileges )

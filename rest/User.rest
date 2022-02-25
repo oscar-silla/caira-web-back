@@ -1,0 +1,23 @@
+@url=http://localhost:3010
+@token=Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2wiOjQsInVzZXJJZCI6IjYyMTRhZjY1ODBkODQ1OGU5Y2Y4MWY0NiIsImlhdCI6MTY0NTUyNzU2N30.dFtnatla6jkily3HxEuFB8hVx-Im6AZfkIJkbRLpeHU
+###
+
+GET {{url}}/users
+{{token}}
+###
+
+GET {{url}}/user/6217d20df3ff61660838ea51
+{{token}}
+###
+
+POST {{url}}/user
+Content-Type: application/json
+
+{
+    "name": "Óscar",
+    "surnames": "Silla Adalid",
+    "email": "oscarsilla00@gmail.com",
+    "password": "1234",
+    "rpassword": "1234"
+}
+###
