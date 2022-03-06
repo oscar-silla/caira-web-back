@@ -1,0 +1,16 @@
+@url = http://localhost:3010
+@token = Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2wiOjQsInVzZXJJZCI6IjYyMWZiMWZmNTExMDVkOGE5N2UyYjhhYSIsImlhdCI6MTY0NjI0NDM3NH0.oTDsenQcmnG4wtkise8xrvW_lyEod2rFk-1cgsd7T9k
+###
+
+GET {{url}}/posts
+{{token}}
+###
+
+POST {{url}}/post
+Content-Type: application/json
+{{token}}
+
+{
+    "userId": "621fb1ff51105d8a97e2b8aa",
+    "content": "Esto es una prueba"
+}

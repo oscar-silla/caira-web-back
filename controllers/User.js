@@ -88,6 +88,23 @@ exports.get_user_by_user_id = async ( _req, _res ) => {
 
             };
 
+
+            switch ( response?.rol ) {
+
+                case 1: response.rol = 'Project Admin';
+                break;
+
+                case 2: response.rol = 'University';
+                break;
+
+                case 3: response.rol = 'Partner';
+                break;
+
+                case 4: response.rol = 'Student';
+                break;
+
+            };
+
             return _res.status( 200 ).send({
                 status: 200,
                 msg: 'User found.',

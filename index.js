@@ -3,10 +3,16 @@ require( './database/mongo' );
 const express = require( 'express' );
 const cors    = require( 'cors' );
 const { Router } = require('./routes/router');
+const bodyParser = require('body-parser');
 
 const api = express();
 
 /* Middlewares */
+api.use(bodyParser.json({
+    limit: '50mb'
+}));
+
+
 api.use( express.json() );
 api.use( cors() );
 

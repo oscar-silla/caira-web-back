@@ -38,12 +38,14 @@ exports.login = async ( _req, _res ) => {
         // Find user by email
         const filter = { email: email };
         const userFound = await mongo.collection( 'users' ).findOne( filter );
+        console.log( "userFound", `(${typeof userFound}): `, userFound);
 
         if ( userFound ) {
 
             // Compare passwords
             let passwordCrypt;
             if ( userFound ) passwordCrypt = userFound?.password;
+
 
             const validatePassword = await bcrypt.compare( password, passwordCrypt );
 

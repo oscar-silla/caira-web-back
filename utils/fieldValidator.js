@@ -42,7 +42,7 @@ exports.fieldValidator = ( _value, _type ) => {
             break;
 
         };
-        console.log( "validated", `(${typeof validated}): `, validated);
+        
 
         return validated;
 
