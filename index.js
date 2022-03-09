@@ -1,6 +1,7 @@
 require( 'dotenv' ).config();
 require( './database/mongo' );
 const express = require( 'express' );
+const fileUpload = require('express-fileupload');
 const cors    = require( 'cors' );
 const { Router } = require('./routes/router');
 const bodyParser = require('body-parser');
@@ -12,7 +13,9 @@ api.use(bodyParser.json({
     limit: '50mb'
 }));
 
-
+api.use( fileUpload({
+    tempFileDir: '/tmp'
+}));
 api.use( express.json() );
 api.use( cors() );
 

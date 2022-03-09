@@ -27,7 +27,7 @@ exports.login = async ( _req, _res ) => {
         // Email validation
         if ( !fieldValidator( email, 'email' ) ) {
             return _res.send({
-                status: 400,
+                status: 502,
                 msg: 'Wrong email.',
                 result: null
             });

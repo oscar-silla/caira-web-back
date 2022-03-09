@@ -1,3 +1,4 @@
+const { post_image } = require("../controllers/Image");
 const { login } = require("../controllers/Login");
 const { create_post, get_all_posts } = require("../controllers/Post");
 const { post_user, get_users, get_user_by_user_id } = require("../controllers/User");
@@ -18,5 +19,8 @@ exports.Router = ( _api ) => {
     _api.get( '/posts', useExtract, get_all_posts );
     _api.post( '/post', useExtract, create_post );
 
+
+    /* Image */
+    _api.post( '/image', post_image );
     
 };

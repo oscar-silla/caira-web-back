@@ -199,7 +199,7 @@ exports.post_user = async ( _req, _res ) => {
         if ( !fieldValidator( email, 'email' ) ) {
             
             return _res.send({
-                status: 400,
+                status: 502,
                 msg: 'Wrong email.',
                 result: null
             });
